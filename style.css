@@ -13,17 +13,23 @@ body {
     min-height: 100vh;
 }
 
-/* Vanta background covers full page */
+/* Vanta background covers full page behind everything */
 #vanta-bg {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    min-height: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
-/* Content card: white background, centered */
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Content card: white background, centered, always on top */
 .container {
     max-width: 850px;
     margin: 60px auto;
@@ -32,7 +38,7 @@ body {
     border-radius: 6px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 
 /* Profile row: photo left, info right */
@@ -156,9 +162,9 @@ h2 {
     text-align: center;
     padding: 20px;
     font-size: 13px;
-    color: #999;
+    color: #fff;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 
 /* Mobile */
