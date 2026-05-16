@@ -1,0 +1,3 @@
+Place your files in this folder:
+- profile.jpg (your professional headshot photo)
+- cv.pdf (your CV as a PDF)
