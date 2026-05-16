@@ -11,37 +11,39 @@
 </head>
 <body>
 
+    <!-- Vanta.js fog background -->
+    <div id="vanta-bg"></div>
+
+    <!-- Main content card -->
     <main class="container">
 
-        <!-- Profile Section -->
-        <div class="profile">
-            <img src="assets/profile.jpeg" alt="Carolina Raffaelli" class="profile-photo">
-            <h1>Carolina Raffaelli</h1>
-            <p class="title">PhD Candidate in Marketing</p>
-            <p class="affiliation">Rady School of Management, UC San Diego</p>
-        </div>
-
-        <!-- Bio -->
-        <div class="bio">
-            <p>
-                I am a PhD candidate in marketing at the Rady School of Management,
-                University of California, San Diego. My research explores how consumers
-                integrate usage considerations — such as cost per use and frequency of use —
-                into purchasing decisions, and how these metrics can encourage more
-                sustainable consumption patterns.
-            </p>
-            <p>
-                I am on the 2026-2027 academic job market.
-            </p>
-        </div>
-
-        <!-- Links -->
-        <div class="links">
-            <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-            <span class="separator">|</span>
-            <a href="assets/cv.pdf" target="_blank">CV</a>
-            <span class="separator">|</span>
-            <a href="mailto:craffaelli@ucsd.edu">Email</a>
+        <!-- Profile Section: photo left, info right -->
+        <div class="profile-row">
+            <div class="profile-photo-wrap">
+                <img src="assets/profile.jpeg" alt="Carolina Raffaelli" class="profile-photo">
+            </div>
+            <div class="profile-info">
+                <h1>Carolina Raffaelli</h1>
+                <p class="title">PhD Candidate in Marketing</p>
+                <p class="affiliation">Rady School of Management, UC San Diego</p>
+                <p class="bio">
+                    I am a PhD candidate in marketing at the Rady School of Management,
+                    University of California, San Diego. My research explores how consumers
+                    integrate usage considerations — such as cost per use and frequency of use —
+                    into purchasing decisions, and how these metrics can encourage more
+                    sustainable consumption patterns.
+                </p>
+                <p class="bio">
+                    I am on the 2026-2027 academic job market.
+                </p>
+                <div class="links">
+                    <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                    <span class="separator">|</span>
+                    <a href="assets/cv.pdf" target="_blank">CV</a>
+                    <span class="separator">|</span>
+                    <a href="mailto:craffaelli@ucsd.edu">Email</a>
+                </div>
+            </div>
         </div>
 
         <!-- Working Papers -->
@@ -82,6 +84,25 @@
     <footer class="footer">
         <p>&copy; 2026 Carolina Raffaelli</p>
     </footer>
+
+    <!-- Vanta.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script>
+        VANTA.FOG({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xe0e6ed,
+            midtoneColor: 0xd6dce6,
+            lowlightColor: 0xf0f4f8,
+            baseColor: 0xf8fafc,
+            speed: 1.0
+        });
+    </script>
 
 </body>
 </html>
