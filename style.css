@@ -31,10 +31,10 @@ body {
 
 /* Content card: white background, centered, always on top */
 .container {
-    max-width: 850px;
+    max-width: 1050px;
     margin: 60px auto;
     background: #fff;
-    padding: 50px 60px;
+    padding: 50px 70px;
     border-radius: 6px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
     position: relative;
@@ -55,12 +55,13 @@ body {
 }
 
 .profile-photo {
-    width: 280px;
+    width: 360px;
     height: 100%;
     object-fit: cover;
     object-position: top;
     border-radius: 12px;
     display: block;
+    box-shadow: 6px 10px 24px rgba(0, 0, 0, 0.18), 2px 4px 8px rgba(0, 0, 0, 0.10);
 }
 
 .profile-info {
