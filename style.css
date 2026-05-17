@@ -46,24 +46,26 @@ body {
     display: flex;
     gap: 40px;
     align-items: flex-start;
-    margin-bottom: 40px;
-    padding-bottom: 35px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
 }
 
 .profile-photo-wrap {
     flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
 }
 
 .profile-photo {
-    width: 280px;
+    width: 310px;
     height: auto;
     object-fit: cover;
     border-radius: 12px;
+    display: block;
 }
 
 .profile-info {
     flex: 1;
+    padding-top: 4px;
 }
 
 h1 {
@@ -94,24 +96,39 @@ h1 {
     line-height: 1.6;
 }
 
-/* Links */
+/* Links / Buttons */
 .links {
-    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #eee;
 }
 
-.links a {
-    color: #2563eb;
+.link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
     text-decoration: none;
+    color: #333;
     font-size: 14px;
+    background: #f9fafb;
+    transition: background 0.2s, border-color 0.2s;
 }
 
-.links a:hover {
-    text-decoration: underline;
+.link-btn i {
+    font-size: 13px;
+    color: #555;
 }
 
-.separator {
-    color: #ccc;
-    margin: 0 10px;
+.link-btn:hover {
+    background: #f0f0f0;
+    border-color: #aaa;
+    text-decoration: none;
 }
 
 /* Sections */
