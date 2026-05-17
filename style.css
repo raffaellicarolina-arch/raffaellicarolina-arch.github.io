@@ -56,10 +56,10 @@ body {
 }
 
 .profile-photo {
-    width: 200px;
+    width: 240px;
     height: auto;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 12px;
 }
 
 .profile-info {
