@@ -13,20 +13,20 @@ body {
     min-height: 100vh;
 }
 
-/* Vanta background covers full page behind everything */
+/* Vanta background: fixed so it always fills the full viewport */
 #vanta-bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 body {
     position: relative;
     overflow-x: hidden;
+    background: transparent;
 }
 
 /* Content card: white background, centered, always on top */
