@@ -45,9 +45,14 @@
             <a href="assets/cv.pdf" target="_blank" class="link-btn">
                 <i class="fa-solid fa-file-lines"></i> CV
             </a>
-            <a href="mailto:craffaelli@ucsd.edu" class="link-btn">
-                <i class="fa-solid fa-envelope"></i> Email
-            </a>
+            <div class="email-wrap">
+                <button class="link-btn" onclick="copyEmail(this)">
+                    <i class="fa-solid fa-envelope"></i> Email
+                </button>
+                <div class="email-tooltip" id="email-tooltip">
+                    craffaelli@ucsd.edu <span class="copy-msg" id="copy-msg"></span>
+                </div>
+            </div>
         </div>
 
         <!-- Working Papers -->
@@ -88,6 +93,24 @@
     <footer class="footer">
         <p>&copy; 2026 Carolina Raffaelli</p>
     </footer>
+
+    <script>
+        function copyEmail(btn) {
+            const tooltip = document.getElementById('email-tooltip');
+            const msg = document.getElementById('copy-msg');
+            tooltip.classList.toggle('visible');
+            navigator.clipboard.writeText('craffaelli@ucsd.edu').then(() => {
+                msg.textContent = '✓ Copied!';
+                setTimeout(() => { msg.textContent = ''; }, 2000);
+            });
+            document.addEventListener('click', function hide(e) {
+                if (!btn.contains(e.target)) {
+                    tooltip.classList.remove('visible');
+                    document.removeEventListener('click', hide);
+                }
+            });
+        }
+    </script>
 
     <!-- Vanta.js scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>

@@ -41,30 +41,31 @@ body {
     z-index: 1;
 }
 
-/* Profile row: photo left, info right */
+/* Profile row: photo left, info right — same height */
 .profile-row {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    align-items: stretch;
     margin-bottom: 24px;
 }
 
 .profile-photo-wrap {
     flex-shrink: 0;
     display: flex;
-    align-items: flex-start;
 }
 
 .profile-photo {
-    width: 310px;
-    height: auto;
+    width: 280px;
+    height: 100%;
     object-fit: cover;
+    object-position: top;
     border-radius: 12px;
     display: block;
 }
 
 .profile-info {
     flex: 1;
+    max-width: 420px;
     padding-top: 4px;
 }
 
@@ -111,24 +112,54 @@ h1 {
     align-items: center;
     gap: 7px;
     padding: 7px 16px;
-    border: 1px solid #d1d5db;
-    border-radius: 999px;
+    border: 1.5px solid #111;
+    border-radius: 4px;
     text-decoration: none;
-    color: #333;
+    color: #111;
     font-size: 14px;
-    background: #f9fafb;
-    transition: background 0.2s, border-color 0.2s;
+    background: transparent;
+    transition: color 0.2s, border-color 0.2s;
+    cursor: pointer;
 }
 
 .link-btn i {
     font-size: 13px;
-    color: #555;
 }
 
 .link-btn:hover {
-    background: #f0f0f0;
-    border-color: #aaa;
+    color: #2563eb;
+    border-color: #2563eb;
     text-decoration: none;
+}
+
+/* Email tooltip */
+.email-wrap {
+    position: relative;
+    display: inline-flex;
+}
+
+.email-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: #111;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.email-tooltip.visible {
+    display: block;
+}
+
+.email-tooltip .copy-msg {
+    color: #86efac;
+    margin-left: 8px;
+    font-size: 12px;
 }
 
 /* Sections */
