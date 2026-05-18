@@ -185,9 +185,9 @@
     <script>
         window.addEventListener('scroll', function() {
             const scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
-            const r = Math.round(24 + scrollFraction * (0 - 24));
-            const g = Math.round(43 + scrollFraction * (98 - 43));
-            const b = Math.round(73 + scrollFraction * (155 - 73));
+            const r = Math.round(26 + scrollFraction * (19 - 26));
+            const g = Math.round(58 + scrollFraction * (42 - 58));
+            const b = Math.round(92 + scrollFraction * (74 - 92));
             document.getElementById('scroll-bg').style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
         });
     </script>
