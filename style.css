@@ -13,14 +13,16 @@ body {
     min-height: 100vh;
 }
 
-/* Vanta background: fixed, always fills full viewport */
-#vanta-bg {
+/* Scroll-reactive background */
+#scroll-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 0;
+    background-color: #00629B;
+    transition: background-color 0.1s ease;
 }
 
 body {

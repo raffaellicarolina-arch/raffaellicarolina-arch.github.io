@@ -13,8 +13,8 @@
 </head>
 <body>
 
-    <!-- Vanta.js fog background -->
-    <div id="vanta-bg"></div>
+    <!-- Scroll-reactive background -->
+    <div id="scroll-bg"></div>
 
     <!-- Main content card -->
     <main class="container">
@@ -181,25 +181,14 @@
         }
     </script>
 
-    <!-- Vanta.js scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+    <!-- Scroll-reactive background -->
     <script>
-        VANTA.TOPOLOGY({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            backgroundAlpha: 1,
-            backgroundColor: 0x182B49,
-            color: 0xFFCD00,
-            maxDistance: 15,
-            spacing: 20,
-            speed: 0.3
+        window.addEventListener('scroll', function() {
+            const scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
+            const r = Math.round(0 + scrollFraction * (24 - 0));
+            const g = Math.round(98 + scrollFraction * (43 - 98));
+            const b = Math.round(155 + scrollFraction * (73 - 155));
+            document.getElementById('scroll-bg').style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
         });
     </script>
 
