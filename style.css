@@ -26,12 +26,13 @@ body {
 }
 
 #stars {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -50,7 +51,7 @@ body {
     border-radius: 6px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Profile row: photo left, info right — same height */
@@ -377,7 +378,7 @@ h2 {
     font-size: 13px;
     color: #fff;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Mobile */
