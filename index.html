@@ -15,6 +15,7 @@
 
     <!-- Scroll-reactive background -->
     <div id="scroll-bg"></div>
+    <canvas id="stars"></canvas>
 
     <!-- Main content card -->
     <main class="container">
@@ -181,17 +182,61 @@
         }
     </script>
 
-    <!-- Scroll-reactive background -->
+    <!-- Scroll-reactive background + stars -->
     <script>
+        var canvas = document.getElementById('stars');
+        var ctx = canvas.getContext('2d');
+        var stars = [];
+
+        function initStars() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            stars = [];
+            var count = Math.floor((canvas.width * canvas.height) / 800);
+            for (var i = 0; i < count; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    r: Math.random() * 1.4 + 0.3,
+                    base: Math.random() * 0.5 + 0.3,
+                    speed: Math.random() * 0.008 + 0.003,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+        }
+
+        var frame = 0;
+        function drawStars() {
+            var scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
+            var opacity = Math.max(1 - scrollFraction * 2.5, 0);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (opacity > 0) {
+                for (var i = 0; i < stars.length; i++) {
+                    var s = stars[i];
+                    var twinkle = s.base + Math.sin(frame * s.speed + s.phase) * 0.3;
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255,255,255,' + (twinkle * opacity) + ')';
+                    ctx.fill();
+                }
+            }
+            frame++;
+            requestAnimationFrame(drawStars);
+        }
+
         function updateBg() {
-            const scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
-            const r = Math.round(15 + scrollFraction * (30 - 15));
-            const g = Math.round(34 + scrollFraction * (66 - 34));
-            const b = Math.round(53 + scrollFraction * (102 - 53));
+            var scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
+            var r = Math.round(15 + scrollFraction * (30 - 15));
+            var g = Math.round(34 + scrollFraction * (66 - 34));
+            var b = Math.round(53 + scrollFraction * (102 - 53));
             document.getElementById('scroll-bg').style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
         }
-        window.addEventListener('scroll', updateBg);
+
+        initStars();
+        drawStars();
         updateBg();
+        window.addEventListener('scroll', updateBg);
+        window.addEventListener('resize', initStars);
     </script>
 
 </body>
