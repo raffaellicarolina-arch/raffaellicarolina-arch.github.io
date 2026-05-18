@@ -183,13 +183,15 @@
 
     <!-- Scroll-reactive background -->
     <script>
-        window.addEventListener('scroll', function() {
+        function updateBg() {
             const scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
             const r = Math.round(15 + scrollFraction * (30 - 15));
             const g = Math.round(34 + scrollFraction * (66 - 34));
             const b = Math.round(53 + scrollFraction * (102 - 53));
             document.getElementById('scroll-bg').style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-        });
+        }
+        window.addEventListener('scroll', updateBg);
+        updateBg();
     </script>
 
 </body>
