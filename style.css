@@ -13,27 +13,14 @@ body {
     min-height: 100vh;
 }
 
-/* Scroll-reactive background */
-#scroll-bg {
+/* Vanta background: fixed, always fills full viewport */
+#vanta-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 0;
-    background-color: #0f2235;
-    transition: background-color 0.1s ease;
-}
-
-#stars {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    pointer-events: none;
 }
 
 body {
@@ -51,7 +38,7 @@ body {
     border-radius: 6px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* Profile row: photo left, info right — same height */
@@ -378,7 +365,7 @@ h2 {
     font-size: 13px;
     color: #fff;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* Mobile */

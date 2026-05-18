@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carolina Raffaelli</title>
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,9 +13,8 @@
 </head>
 <body>
 
-    <!-- Scroll-reactive background -->
-    <div id="scroll-bg"></div>
-    <canvas id="stars"></canvas>
+    <!-- Vanta.js background -->
+    <div id="vanta-bg"></div>
 
     <!-- Main content card -->
     <main class="container">
@@ -182,87 +181,26 @@
         }
     </script>
 
-    <!-- Scroll-reactive background + stars -->
+    <!-- Vanta.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
     <script>
-        var canvas = document.getElementById('stars');
-        var ctx = canvas.getContext('2d');
-        var stars = [];
-        var colors = [
-            [255, 255, 255],
-            [255, 248, 240],
-            [240, 248, 255],
-            [255, 240, 230],
-            [230, 240, 255]
-        ];
-
-        function initStars() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            stars = [];
-            var count = Math.floor((canvas.width * canvas.height) / 1400);
-            for (var i = 0; i < count; i++) {
-                var bright = Math.random();
-                var isBright = bright > 0.97;
-                var isMedium = bright > 0.85;
-                var c = colors[Math.floor(Math.random() * colors.length)];
-                stars.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    r: isBright ? (Math.random() * 1.2 + 1.0) : isMedium ? (Math.random() * 0.6 + 0.5) : (Math.random() * 0.4 + 0.2),
-                    base: isBright ? 0.9 : isMedium ? (Math.random() * 0.3 + 0.5) : (Math.random() * 0.2 + 0.15),
-                    speed: Math.random() * 0.006 + 0.001,
-                    phase: Math.random() * Math.PI * 2,
-                    twinkleAmt: isBright ? 0.1 : (Math.random() * 0.15 + 0.05),
-                    glow: isBright,
-                    color: c
-                });
-            }
-        }
-
-        var frame = 0;
-        function drawStars() {
-            var scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
-            var opacity = Math.max(1 - scrollFraction * 2.5, 0);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            if (opacity > 0) {
-                for (var i = 0; i < stars.length; i++) {
-                    var s = stars[i];
-                    var twinkle = s.base + Math.sin(frame * s.speed + s.phase) * s.twinkleAmt;
-                    var a = twinkle * opacity;
-                    var c = s.color;
-                    if (s.glow) {
-                        var grad = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 3);
-                        grad.addColorStop(0, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a + ')');
-                        grad.addColorStop(0.4, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + (a * 0.3) + ')');
-                        grad.addColorStop(1, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0)');
-                        ctx.beginPath();
-                        ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
-                        ctx.fillStyle = grad;
-                        ctx.fill();
-                    }
-                    ctx.beginPath();
-                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a + ')';
-                    ctx.fill();
-                }
-            }
-            frame++;
-            requestAnimationFrame(drawStars);
-        }
-
-        function updateBg() {
-            var scrollFraction = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
-            var r = Math.round(15 + scrollFraction * (30 - 15));
-            var g = Math.round(34 + scrollFraction * (66 - 34));
-            var b = Math.round(53 + scrollFraction * (102 - 53));
-            document.getElementById('scroll-bg').style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-        }
-
-        initStars();
-        drawStars();
-        updateBg();
-        window.addEventListener('scroll', updateBg);
-        window.addEventListener('resize', initStars);
+        VANTA.TOPOLOGY({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundAlpha: 1,
+            backgroundColor: 0x182B49,
+            color: 0xFFCD00,
+            maxDistance: 15,
+            spacing: 20,
+            speed: 0.3
+        });
     </script>
 
 </body>
