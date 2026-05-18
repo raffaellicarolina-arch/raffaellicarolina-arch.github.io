@@ -253,9 +253,16 @@ h2 {
     white-space: nowrap;
 }
 
+.pub-status-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+}
+
 .pub-status {
     display: inline-block;
-    margin-top: 6px;
     font-size: 12px;
     font-weight: 500;
     padding: 3px 10px;
@@ -263,6 +270,30 @@ h2 {
     border: 1.5px solid #999;
     color: #555;
     background: transparent;
+    white-space: nowrap;
+}
+
+.pub-award {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: #fef9c3;
+    border: 1.5px solid #eab308;
+    color: #854d0e;
+    white-space: nowrap;
+}
+
+.pub-jmp {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: #dcfce7;
+    border: 1.5px solid #16a34a;
+    color: #166534;
     white-space: nowrap;
 }
 
