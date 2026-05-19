@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
     color: #52616B;
     background: #0B1F3A;
@@ -56,31 +56,43 @@ body {
 }
 
 h1 {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 600;
     margin-bottom: 4px;
     color: #1F2933;
 }
 
 .title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: #52616B;
     margin-bottom: 2px;
 }
 
 .affiliation {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     color: #52616B;
     margin-bottom: 16px;
 }
 
 .bio {
-    font-size: 14px;
+    font-size: 15px;
     color: #52616B;
     margin-bottom: 10px;
     line-height: 1.6;
+}
+
+.bio-list {
+    font-size: 15px;
+    color: #52616B;
+    line-height: 1.6;
+    margin: 0 0 10px 20px;
+    padding: 0;
+}
+
+.bio-list li {
+    margin-bottom: 6px;
 }
 
 /* Links / Buttons */
@@ -102,14 +114,14 @@ h1 {
     border-radius: 4px;
     text-decoration: none;
     color: #1F2933;
-    font-size: 14px;
+    font-size: 15px;
     background: transparent;
     transition: color 0.2s, border-color 0.2s;
     cursor: pointer;
 }
 
 .link-btn i {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .link-btn:hover {
@@ -154,7 +166,7 @@ h1 {
 }
 
 h2 {
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 600;
     margin-bottom: 18px;
     color: #1F2933;
@@ -194,7 +206,7 @@ h2 {
 }
 
 .pub-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: #1F2933;
     line-height: 1.4;
@@ -202,7 +214,7 @@ h2 {
 }
 
 .pub-journal {
-    font-size: 14px;
+    font-size: 15px;
     font-style: italic;
     color: #2563eb;
     margin-bottom: 6px;
@@ -216,7 +228,7 @@ h2 {
 }
 
 .pub-authors {
-    font-size: 13px;
+    font-size: 14px;
     color: #52616B;
     margin-bottom: 8px;
 }
@@ -231,7 +243,7 @@ h2 {
 .pub-year {
     background: #1F2933;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     padding: 3px 10px;
     border-radius: 4px;
@@ -295,7 +307,7 @@ h2 {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-size: 13px;
+    font-size: 14px;
     color: #1F2933;
     border: 1.5px solid #1F2933;
     border-radius: 4px;
@@ -313,7 +325,7 @@ h2 {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-size: 13px;
+    font-size: 14px;
     color: #aaa;
     border: 1.5px solid #ddd;
     border-radius: 4px;
@@ -343,7 +355,7 @@ h2 {
     margin-top: 14px;
     padding-top: 14px;
     border-top: 1px solid #e8e8e8;
-    font-size: 13.5px;
+    font-size: 14.5px;
     color: #52616B;
     line-height: 1.7;
 }
