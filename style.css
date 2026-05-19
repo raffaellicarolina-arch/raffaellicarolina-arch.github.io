@@ -9,31 +9,16 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #333;
-    background: transparent;
+    background: #0B1F3A;
     min-height: 100vh;
-}
-
-/* Vanta background: fixed, always fills full viewport */
-#vanta-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-}
-
-body {
-    position: relative;
     overflow-x: hidden;
-    background: transparent;
 }
 
 /* Content card: white background, centered, always on top */
 .container {
     max-width: 1050px;
     margin: 60px auto;
-    background: #fff;
+    background: #F7F5F0;
     padding: 50px 70px;
     border-radius: 6px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
