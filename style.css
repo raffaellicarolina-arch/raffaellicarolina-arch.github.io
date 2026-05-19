@@ -56,23 +56,23 @@ body {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 4px;
     color: #1F2933;
 }
 
 .title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: #52616B;
     margin-bottom: 2px;
 }
 
 .affiliation {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 300;
-    color: #52616B;
+    color: #7B8794;
     margin-bottom: 16px;
 }
 
