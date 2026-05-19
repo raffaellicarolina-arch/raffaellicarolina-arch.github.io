@@ -8,7 +8,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
     line-height: 1.7;
-    color: #333;
+    color: #52616B;
     background: #0B1F3A;
     min-height: 100vh;
     overflow-x: hidden;
@@ -59,26 +59,26 @@ h1 {
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 4px;
-    color: #111;
+    color: #1F2933;
 }
 
 .title {
     font-size: 15px;
     font-weight: 400;
-    color: #555;
+    color: #52616B;
     margin-bottom: 2px;
 }
 
 .affiliation {
     font-size: 14px;
     font-weight: 300;
-    color: #777;
+    color: #52616B;
     margin-bottom: 16px;
 }
 
 .bio {
     font-size: 14px;
-    color: #444;
+    color: #52616B;
     margin-bottom: 10px;
     line-height: 1.6;
 }
@@ -98,10 +98,10 @@ h1 {
     align-items: center;
     gap: 7px;
     padding: 7px 16px;
-    border: 1.5px solid #111;
+    border: 1.5px solid #1F2933;
     border-radius: 4px;
     text-decoration: none;
-    color: #111;
+    color: #1F2933;
     font-size: 14px;
     background: transparent;
     transition: color 0.2s, border-color 0.2s;
@@ -129,7 +129,7 @@ h1 {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
-    background: #111;
+    background: #1F2933;
     color: #fff;
     font-size: 13px;
     padding: 6px 12px;
@@ -157,7 +157,7 @@ h2 {
     font-size: 19px;
     font-weight: 600;
     margin-bottom: 18px;
-    color: #111;
+    color: #1F2933;
 }
 
 /* Simple papers (Working Papers / Research in Progress) */
@@ -168,12 +168,12 @@ h2 {
 .paper-title {
     font-weight: 500;
     margin-bottom: 3px;
-    color: #111;
+    color: #1F2933;
 }
 
 .paper-authors {
     font-size: 14px;
-    color: #666;
+    color: #52616B;
 }
 
 /* Publication cards */
@@ -182,7 +182,7 @@ h2 {
     border-radius: 8px;
     padding: 20px 24px;
     margin-bottom: 20px;
-    background: #fafafa;
+    background: #FCFBF8;
 }
 
 .pub-header {
@@ -196,7 +196,7 @@ h2 {
 .pub-title {
     font-size: 15px;
     font-weight: 600;
-    color: #111;
+    color: #1F2933;
     line-height: 1.4;
     flex: 1;
 }
@@ -217,7 +217,7 @@ h2 {
 
 .pub-authors {
     font-size: 13px;
-    color: #666;
+    color: #52616B;
     margin-bottom: 8px;
 }
 
@@ -229,7 +229,7 @@ h2 {
 }
 
 .pub-year {
-    background: #111;
+    background: #1F2933;
     color: #fff;
     font-size: 12px;
     font-weight: 600;
@@ -252,8 +252,8 @@ h2 {
     font-weight: 500;
     padding: 3px 10px;
     border-radius: 4px;
-    border: 1.5px solid #999;
-    color: #555;
+    border: 1.5px solid #2563eb;
+    color: #2563eb;
     background: transparent;
     white-space: nowrap;
 }
@@ -291,8 +291,8 @@ h2 {
     align-items: center;
     gap: 5px;
     font-size: 13px;
-    color: #111;
-    border: 1.5px solid #111;
+    color: #1F2933;
+    border: 1.5px solid #1F2933;
     border-radius: 4px;
     padding: 4px 12px;
     text-decoration: none;
@@ -320,7 +320,7 @@ h2 {
     background: transparent;
     border: none;
     cursor: pointer;
-    color: #555;
+    color: #52616B;
     padding: 2px 4px;
     flex-shrink: 0;
 }
@@ -339,7 +339,7 @@ h2 {
     padding-top: 14px;
     border-top: 1px solid #e8e8e8;
     font-size: 13.5px;
-    color: #444;
+    color: #52616B;
     line-height: 1.7;
 }
 
