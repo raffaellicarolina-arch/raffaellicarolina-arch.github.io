@@ -404,4 +404,8 @@ h2 {
     .pub-right {
         margin-top: 8px;
     }
+
+    .pub-status {
+        white-space: normal;
+    }
 }
