@@ -83,6 +83,16 @@ h1 {
     line-height: 1.6;
 }
 
+.bio-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.bio-link:hover {
+    text-decoration: underline;
+}
+
 .bio-list {
     font-size: 15px;
     color: #52616B;
