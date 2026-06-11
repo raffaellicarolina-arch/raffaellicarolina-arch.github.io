@@ -170,6 +170,22 @@ h1 {
     font-size: 12px;
 }
 
+/* Announcement */
+.announcement {
+    border-left: 3px solid #2563eb;
+    background: #f0f4ff;
+    padding: 16px 24px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 36px;
+}
+
+.announcement p {
+    font-size: 15px;
+    color: #1F2933;
+    margin: 0;
+    line-height: 1.6;
+}
+
 /* Sections */
 .section {
     margin-bottom: 40px;
