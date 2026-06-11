@@ -271,7 +271,7 @@ h2 {
 
 .pub-status-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     margin-top: 6px;
     flex-wrap: wrap;
