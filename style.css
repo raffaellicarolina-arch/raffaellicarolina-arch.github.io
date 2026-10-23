@@ -266,6 +266,14 @@ h2 {
     margin-bottom: 8px;
 }
 
+.pub-note {
+    font-size: 12px;
+    color: #7B8794;
+    font-style: italic;
+    margin-top: -4px;
+    margin-bottom: 8px;
+}
+
 .pub-right {
     display: flex;
     align-items: center;
